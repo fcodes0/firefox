@@ -76,6 +76,7 @@
     <command id="Browser:ReloadSkipCache" disabled="true">
       <observes element="Browser:Reload" attribute="disabled"/>
     </command>
+    <command id="Browser:AddSplitView" />
     <command id="Profiles:CreateProfile" />
     <command id="Profiles:ManageProfiles" />
     <command id="Profiles:LaunchProfile" />
@@ -354,6 +355,8 @@
 
     <key id="key_restoreLastClosedTabOrWindowOrSession" command="History:RestoreLastClosedTabOrWindowOrSession" data-l10n-id="tab-new-shortcut" modifiers="accel,shift"/>
     <key id="key_undoCloseWindow" command="History:UndoCloseWindow" data-l10n-id="window-new-shortcut" modifiers="accel,shift"/>
+
+    <key id="key_addSplitView" command="Browser:AddSplitView"/>
 
 #ifdef XP_GNOME
 #define NUM_SELECT_TAB_MODIFIER alt

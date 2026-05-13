@@ -83,6 +83,16 @@ var BrowserCommands = {
     return true;
   },
 
+  addSplitView() {
+    let tab = gBrowser.selectedTab;
+    if (tab.splitview) {
+      return;
+    }
+    let newTab = gBrowser.addTrustedTab("about:opentabs");
+    gBrowser.addTabSplitView([tab, newTab], { trigger: "shortcut" });
+    gBrowser.selectedTab = newTab;
+  },
+
   reloadOrDuplicate(aEvent) {
     aEvent = BrowserUtils.getRootEvent(aEvent);
     const accelKeyPressed =

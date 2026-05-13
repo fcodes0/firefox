@@ -159,6 +159,9 @@ document.addEventListener(
           case "Browser:ReloadSkipCache":
             BrowserCommands.reloadSkipCache();
             break;
+          case "Browser:AddSplitView":
+            BrowserCommands.addSplitView();
+            break;
           case "Browser:NextTab":
             gBrowser.tabContainer.advanceSelectedTab(1, true);
             break;
